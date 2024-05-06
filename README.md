@@ -46,26 +46,52 @@ Ver archivo de configuración [PROPERTIES](src/main/resources/application.proper
 # Listado de endpoints
 
 ## Endpoints de Empleado:
-- `/empleado/crearEmpleado`
-- `/empleado/modificarEmpleado`
-- `/empleado/editarEstado/{id}`
-- `/empleado/obtenerEmpleados`
-- `/empleado/obtenerEmpleado/{id}`
+- POST `/empleado/crearEmpleado`
+- PUT `/empleado/modificarEmpleado`
+- PUT `/empleado/editarEstado/{id}`
+  - para editar el estado en la url debe poner el id del empleado y en el cuerpo del mensaje el estado, sea ACTIVO o INACTIVO
+- GET `/empleado/obtenerEmpleados`
+- GET `/empleado/obtenerEmpleado/{id}`
 
 ## Endpoints de Categoría de Producto:
-- `/categoriaProducto/crearCategoria`
-- `/categoriaProducto/modificarCategoria`
-- `/categoriaProducto/eliminarCategoria/{id}`
+- POST `/categoriaProducto/crearCategoria`
+- PUT `/categoriaProducto/modificarCategoria`
+- DELETE `/categoriaProducto/eliminarCategoria/{id}`
 
 ## Endpoints de Producto:
-- `/producto/crearProducto`
-- `/producto/modificarProducto`
-- `/producto/deleteProducto/{codigo}`
-- `/producto/actualizarStock/{codigo}`
+- POST `/producto/crearProducto`
+- PUT `/producto/modificarProducto`
+- DELETE `/producto/deleteProducto/{codigo}`
+- PUT `/producto/actualizarStock/{codigo}`
+  - para el stock en la url va el código del producto y en el cuerpo de la soicitud la cantidad a actualizar
 
 ## Endpoint del TRM:
-- `/dollar/obtenerValor`
+- GET `/dollar/obtenerValor`
 
 Es importante tener en cuenta que el servidor será de forma local por lo cual al ejecutar el api quedaria como base de la url `localhost:8080'el endpoint a solicitar'`, un ejemplo sería  [localhost:8080/dollar/obtenerValor](`localhost:8080/dollar/obtenerValor`)
 
 - Para hacer uso de la api basta con ejecutar el jar y tener la base de datos PostgreSQL habilitada
+  - comando en consola para ejecutar el jar [`java -jar nombre_del_archivo.jar`]
+Es de aclarar que debes de descargar el jar antes de y reemplazar por el nombre del archivo.
+
+A continuación se encuentran ejemplos de los resultados a algunos endpoints usando POSTMAN
+
+![CREAR PRODUCTO](src%2Fmain%2Fresources%2Fimages%2Fcrear%20producto.png)
+
+![DELETE CATEGORIA](src%2Fmain%2Fresources%2Fimages%2Fdel%20categoria.png)
+
+![DELETE PRODUCTO](src%2Fmain%2Fresources%2Fimages%2Fdel%20producto.png)
+
+![GET EMPLEADOS](src%2Fmain%2Fresources%2Fimages%2FgetEmpleados.png)
+
+![CAMBIAR STOCK CON AUTENTICACION](src%2Fmain%2Fresources%2Fimages%2Fstock%20credenciales.png)
+
+![CAMBIAR STOCK SIN AUTENTICACION](src%2Fmain%2Fresources%2Fimages%2Fstock%20no%20credenciales.png)
+
+![OBTENER CAMBIO DE DIVISA](src%2Fmain%2Fresources%2Fimages%2FTRM.png)
+
+
+#CONTACTO 
+- estare agradecido con cualquier retroalimentacion y/o sugerencia
+  - correo: jacobovargas493@gmail.com
+  - celular: 3186569265
