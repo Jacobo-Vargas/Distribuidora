@@ -74,6 +74,7 @@ Es importante tener en cuenta que el servidor será de forma local por lo cual a
   - comando en consola para ejecutar el jar [`java -jar nombre_del_archivo.jar`]
 Es de aclarar que debes de descargar el jar antes de y reemplazar por el nombre del archivo.
 
+JAR PARA DESCARGAR -->   [Distribuidora](Distribuidora-0.0.1-SNAPSHOT.jar)
 A continuación se encuentran ejemplos de los resultados a algunos endpoints usando POSTMAN
 
 ![CREAR PRODUCTO](src%2Fmain%2Fresources%2Fimages%2Fcrear%20producto.png)
